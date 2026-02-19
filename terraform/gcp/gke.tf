@@ -29,3 +29,12 @@ resource "google_container_node_pool" "custom_node_pool" {
     image_type = "Ubuntu"
   }
 }
+
+resource "google_container_node_pool" "custom_node_pool2" {
+  cluster  = google_container_cluster.workload_cluster.name
+  location = var.region
+
+  node_config {
+    image_type = "Ubuntu"
+  }
+}
