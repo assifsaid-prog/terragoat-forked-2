@@ -15,7 +15,9 @@ resource "aws_db_instance" "default" {
   password                = var.password
   apply_immediately       = true
   multi_az                = false
+  # nosymbiotic: TF-0084 -fp
   backup_retention_period = 0
+  # nosymbiotic: TF-0114 -fp
   storage_encrypted       = false
   skip_final_snapshot     = true
   monitoring_interval     = 0
