@@ -34,6 +34,7 @@ resource "google_container_node_pool" "custom_node_pool2" {
   cluster  = google_container_cluster.workload_cluster.name
   location = var.region
 
+  # nosymbiotic: TF-0072 -fp
   node_config {
     image_type = "Ubuntu"
   }
@@ -88,6 +89,26 @@ resource "google_container_node_pool" "custom_node_pool7" {
 }
 
 resource "google_container_node_pool" "custom_node_pool8" {
+  cluster  = google_container_cluster.workload_cluster.name
+  location = var.region
+
+  # nosymbiotic: TF-0072 -fp
+  node_config {
+    image_type = "Ubuntu"
+  }
+}
+
+resource "google_container_node_pool" "custom_node_pool9" {
+  cluster  = google_container_cluster.workload_cluster.name
+  location = var.region
+
+  # nosymbiotic: TF-0072 -fp
+  node_config {
+    image_type = "Ubuntu"
+  }
+}
+
+resource "google_container_node_pool" "custom_node_pool10" {
   cluster  = google_container_cluster.workload_cluster.name
   location = var.region
 
