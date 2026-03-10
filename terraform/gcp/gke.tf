@@ -134,6 +134,7 @@ resource "google_container_node_pool" "custom_node_pool12" {
 
   # nosymbiotic: TF-0126 -fp
   # nosymbiotic: TF-0331 -fp
+  # nosymbiotic: TF-0072 -fp
   node_config {
     image_type = "Ubuntu"
   }
