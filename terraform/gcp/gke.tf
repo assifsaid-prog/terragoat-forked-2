@@ -35,6 +35,7 @@ resource "google_container_node_pool" "custom_node_pool2" {
   location = var.region
 
   # nosymbiotic: TF-0072 -fp
+  # nosymbiotic: TF-0331 -fp
   node_config {
     image_type = "Ubuntu"
   }
