@@ -77,6 +77,7 @@ resource azurerm_network_security_group "bad_sg" {
     name                       = "AllowSSH"
     priority                   = 200
     protocol                   = "TCP"
+    # nosymbiotic: TF-0135 -fp
     source_address_prefix      = "*"
     source_port_range          = "*"
     destination_port_range     = "22-22"
