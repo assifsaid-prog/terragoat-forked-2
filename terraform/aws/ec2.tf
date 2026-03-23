@@ -6,6 +6,7 @@ resource "aws_instance" "web_host" {
   vpc_security_group_ids = [
   "${aws_security_group.web-node.id}"]
   subnet_id = "${aws_subnet.web_subnet.id}"
+  # nosymbiotic: TF-0133 -fp
   user_data = <<EOF
 #! /bin/bash
 sudo apt-get update
