@@ -8,3 +8,9 @@ resource azurerm_security_center_contact "contact" {
   alerts_to_admins    = false
   email               = "some@email.com"
 }
+resource azurerm_security_center_contact "contact2" {
+  
+  alert_notifications = false
+  alerts_to_admins    = false
+  email               = "some@email.com"
+}
