@@ -135,6 +135,14 @@ resource "azurerm_postgresql_configuration" "thrtottling_config6" {
   name                = "connection_throttling"
   resource_group_name = azurerm_resource_group.example.name
   server_name         = azurerm_postgresql_server.example.name
+  # nosymbiotic: TF-0462 -- please specify an ignore reason
+  value               = "off"
+}
+
+resource "azurerm_postgresql_configuration" "thrtottling_config7" {
+  name                = "connection_throttling"
+  resource_group_name = azurerm_resource_group.example.name
+  server_name         = azurerm_postgresql_server.example.name
   value               = "off"
 }
 
