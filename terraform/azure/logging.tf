@@ -28,3 +28,13 @@ resource azurerm_monitor_log_profile "logging_profile3" {
     days    = 30
   }
 }
+resource azurerm_monitor_log_profile "logging_profile4" {
+  storage_account_id = azurerm_storage_account.example.id
+  categories         = ["Action"]
+  locations          = [var.location]
+  name               = "terragoat-${var.environment}"
+  retention_policy {
+    enabled = true
+    days    = 30
+  }
+}
